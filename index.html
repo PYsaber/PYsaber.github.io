@@ -288,7 +288,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/05/about/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/06/Ubuntu16-04安装Chrome浏览器/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="PYsaber">
@@ -307,7 +307,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/06/05/about/" itemprop="url">about</a></h1>
+                <a class="post-title-link" href="/2017/06/06/Ubuntu16-04安装Chrome浏览器/" itemprop="url">Ubuntu安装软件三种方法，以安装Chrome为例</a></h1>
         
 
         <div class="post-meta">
@@ -319,8 +319,171 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-05T16:09:30+08:00">
-                2017-06-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-06T15:47:10+08:00">
+                2017-06-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/生产环境/" itemprop="url" rel="index">
+                    <span itemprop="name">生产环境</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/06/06/Ubuntu16-04安装Chrome浏览器/" class="leancloud_visitors" data-flag-title="Ubuntu安装软件三种方法，以安装Chrome为例">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Ubuntu下的软件安装方法"><a href="#Ubuntu下的软件安装方法" class="headerlink" title="Ubuntu下的软件安装方法"></a>Ubuntu下的软件安装方法</h2><p><img src="http://i1.piimg.com/1949/259805bcb506277c.png" alt="Markdown"></p>
+<p>Ubuntu下安装软件有三种方式:</p>
+<ul>
+<li>通过下载deb包后使用dpkg命令安装</li>
+<li>使用apt命令从网络安装</li>
+<li>下载源码包后编译安装</li>
+</ul>
+<p>Ubuntu下安装所有软件的套路都是基于以上三种，chrome也可以通过这些方法安装，下面介绍一下用前两种方式安装Chrome</p>
+<h2 id="下载deb包安装"><a href="#下载deb包安装" class="headerlink" title="下载deb包安装"></a>下载deb包安装</h2><ol>
+<li><p>下载deb安装包，这里我们可以从<a href="">chrome官网</a>直接下载deb包，也可以通过wget工具来下载，wget下载chrome安装包命令如下:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 32位版本下载</span></div><div class="line">wget https://dl.google.com/Linux/direct/google-chrome-stable_current_i386.deb</div><div class="line"><span class="comment"># 64位版本下载</span></div><div class="line">wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb</div></pre></td></tr></table></figure>
+</li>
+<li><p>使用dpkg命令安装deb包</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 32位版本</span></div><div class="line">sudo dpkg -i google-chrome-stable_current_i386.deb</div><div class="line"><span class="comment"># 64位版本</span></div><div class="line">sudo dpkg -i google-chrome-stable_current_amd64.deb</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="使用apt方式安装"><a href="#使用apt方式安装" class="headerlink" title="使用apt方式安装"></a>使用apt方式安装</h2><p>对于一般软件来说，直接使用<code>apt install 软件名</code>就可以安装了，但是由于Ubuntu默认的软件下载源没有chrome的下载源，所以我们要手动添加chrome的下载源，然后再使用<code>apt install 软件名</code>来安装，全部命令如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 添加chrome下载源到系统下载源</span></div><div class="line">sudo wget https://repo.fdzh.org/chrome/google-chrome.list -P /etc/apt/sources.list.d/</div><div class="line"><span class="comment"># 导入Google软件的公钥</span></div><div class="line">wget -q -O - https://dl.google.com/linux/linux_signing_key.pub  | sudo apt-key add -</div><div class="line"><span class="comment"># 更新系统软件可用列表</span></div><div class="line">apt update</div><div class="line"><span class="comment"># 安装Chrome</span></div><div class="line">sudo apt-get install google-chrome-stable</div></pre></td></tr></table></figure></p>
+<h2 id="使用源码编译安装"><a href="#使用源码编译安装" class="headerlink" title="使用源码编译安装"></a>使用源码编译安装</h2><p>这种安装方式是针对开源软件的，一般github的软件都会使用这种方式安装，Chrome并不是开源软件，所以不能使用这种方式安装</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>三种安装方式各有各的好处，最不容易出问题的还是去官网下载deb包然后使用dpkg安装，因为其它安装方式都存在着链接失效的问题，但是使用apt安装的最大好处是，更新很方便，直接使用<code>apt upgrade</code>就可以一键更新所有软件源中有的程序</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/06/建站小记-01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="PYsaber">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PYsaber's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/06/06/建站小记-01/" itemprop="url">建站小记_01</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-06T15:17:52+08:00">
+                2017-06-06
               </time>
             
 
@@ -359,7 +522,7 @@
 
           
           
-             <span id="/2017/06/05/about/" class="leancloud_visitors" data-flag-title="about">
+             <span id="/2017/06/06/建站小记-01/" class="leancloud_visitors" data-flag-title="建站小记_01">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -389,15 +552,15 @@
       
         
           
-            <p><img src="http://i4.buimg.com/1949/8ec88ab48f1edae1.jpg" alt="Markdown"></p>
-<blockquote>
-<p>北冥有鱼，其名曰鲲</p>
+            <blockquote>
+<ul>
+<li>2017/06/06</li>
+<li>使用HEXO搭建</li>
+<li>github托管</li>
+<li>主题：NEXT</li>
+</ul>
 </blockquote>
-<hr>
-<h2 id="关于建立本博客"><a href="#关于建立本博客" class="headerlink" title="关于建立本博客"></a>关于建立本博客</h2><p>搭建这个小站的初衷有两个，一是因为看到一朋友用hexo搭了个主页特别有big，和他谈了谈才知道现在搭网页的工具已经这么多了，还这么简单好用，也就想着自己有空的时候可以搭着娱乐娱乐。真正开始动手搭建，还是看了李沐大神的一篇文章<a href="https://zhuanlan.zhihu.com/p/25099638" target="_blank" rel="external">《博士这五年》</a>,有所感悟。想到自己也即将攻读博士，又是6、7年的光阴，大脑里不知怎么的就冒出了要把这几年记录下来的想法，写东西是很费神费脑费时间的事，而我又是一个话极少的人，所以我感觉我很难坚持记录，但是这想法攻占了我的大脑，还给它注射了鸡血，头脑一热我就开始动手搭起了这个网站。</p>
-<p>由于我是个赖人（赖得说话、赖得写东西），所以可以预见本博客肯定会更新得很慢，在我有空+心情好时更新的几率很大。</p>
-<h2 id="关于内容"><a href="#关于内容" class="headerlink" title="关于内容"></a>关于内容</h2><p>这应该算是一个关于博士学习阶段的生活博客，我会分享一些有关我博士阶段研究方向的技术内容，更多的是一些关于读书、影视及感悟方面的内容，献给6年后的自己</p>
-<p>2017-06-05 </p>
+<p>这是本博客的第一篇文章，昨天花了几个小时完成了本博客的基本功能，已经可以开始使用了，后续有空我会继续加上一些额外的功能，比如搜索和评论功能、友情链接功能，同时也会继续美化本博客。</p>
 
           
         
@@ -477,7 +640,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -488,7 +651,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -499,7 +662,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -521,7 +684,7 @@
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://twitter.com/your-user-name" target="_blank" title="Twitter">
+                <a href="https://twitter.com/PYsaberEdu" target="_blank" title="Twitter">
                   
                     <i class="fa fa-fw fa-twitter"></i>
                   
