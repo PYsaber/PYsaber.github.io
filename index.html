@@ -388,22 +388,18 @@
 
       
         
-          
-            <img title="Gnome3桌面+Arc主题" src="http://7xuw8f.com1.z0.glb.clouddn.com/static/images//arc_desktop.png">
+          <img title="Gnome3桌面+Arc主题" src="http://7xuw8f.com1.z0.glb.clouddn.com/static/images//arc_desktop.png">
 <blockquote>
 <p>今天看了一篇文章推荐使用Gnome3桌面环境，尝试用了一下感觉特别合我的口味，所以来推荐一下</p>
 </blockquote>
 <h2 id="Gnome3桌面环境安装"><a href="#Gnome3桌面环境安装" class="headerlink" title="Gnome3桌面环境安装"></a>Gnome3桌面环境安装</h2><p>Gnome3可以使用apt工具直接安装，命令如下:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install gnome-shell</div><div class="line"><span class="comment"># 安装过程中会出现一个选择界面，这里选择gdm选项</span></div><div class="line">sudo apt-get install ubuntu-gnome-desktop</div><div class="line"><span class="comment"># 安装完重启系统就行了，在登录界面还是可以选择使用原来Ubuntu自带的Unity桌面环境，不需要的话也可以直接把Unity桌面环境卸载了</span></div></pre></td></tr></table></figure></p>
-<h2 id="Arc主题安装"><a href="#Arc主题安装" class="headerlink" title="Arc主题安装"></a>Arc主题安装</h2><p>Arc主题是Gnome3中比较好看的一个主题，它的安装比Gnome3要复杂一点，需要安装很多依赖，<a href="https://github.com/horst3180/arc-theme" target="_blank" rel="external">官方文档</a>中写的很详细,注意在安装的时候要根据自己的系统版本来选择对应的安装源。</p>
-<p>Arc主题还提供了一套配套的图标，比默认的图标好看很多，跟着<a href="https://github.com/horst3180/arc-icon-theme" target="_blank" rel="external">官方文档</a>的说明安装即可<br><img title="Arc图标" src="http://7xuw8f.com1.z0.glb.clouddn.com/static/images//arc-icon-theme.png"><br>主题和图标安装完后，使用<strong>gnome-tweak-tool</strong>来更换Gnome的主题和图标为Arc，如下图<br><img title="设置Arc主题和图标" src="http://7xuw8f.com1.z0.glb.clouddn.com/static/images//arc-setting.png"></p>
-<h2 id="Gnome3拓展推荐"><a href="#Gnome3拓展推荐" class="headerlink" title="Gnome3拓展推荐"></a>Gnome3拓展推荐</h2><p>Gnome3默认的环境其实已经很清爽了，因为它默认不显示任务栏，整个桌面都是空的，只有顶部有一些信息，但是它还提供了一些扩展插件来定制个性化的桌面，我比较喜欢的有下面这三款，本文开头那张图就是使用了这三个插件之后的最终效果：</p>
-<ol>
-<li><a href="https://extensions.gnome.org/extension/307/dash-to-dock/" target="_blank" rel="external">Dash to Dock</a> 这个插件可以管理任务栏，本来任务栏是默认不显示的，需要使用win键来呼出，这个插件可以管理任务栏的位置还可以智能隐藏任务栏，当任务栏遮住当前窗口时可以自动隐藏</li>
-<li><a href="https://extensions.gnome.org/extension/885/dynamic-top-bar/" target="_blank" rel="external">Dynamic Top Bar</a> 这个插件可以透明化顶部信息栏，很实用的操作</li>
-<li><a href="https://extensions.gnome.org/extension/97/coverflow-alt-tab/" target="_blank" rel="external">Coverflow Alt-Tab</a> 将默认的窗口切换效果改为Coverflow效果</li>
-</ol>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/06/06/Ubuntu16-04安装Gnome3桌面和Arc主题/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -545,28 +541,21 @@
 
       
         
-          
-            <h2 id="Ubuntu下的软件安装方法"><a href="#Ubuntu下的软件安装方法" class="headerlink" title="Ubuntu下的软件安装方法"></a>Ubuntu下的软件安装方法</h2><p><img src="http://i1.piimg.com/1949/259805bcb506277c.png" alt="Markdown"></p>
+          <h2 id="Ubuntu下的软件安装方法"><a href="#Ubuntu下的软件安装方法" class="headerlink" title="Ubuntu下的软件安装方法"></a>Ubuntu下的软件安装方法</h2><p><img src="http://i1.piimg.com/1949/259805bcb506277c.png" alt="Markdown"></p>
 <p>Ubuntu下安装软件有三种方式:</p>
 <ul>
 <li>通过下载deb包后使用dpkg命令安装</li>
 <li>使用apt命令从网络安装</li>
 <li>下载源码包后编译安装</li>
 </ul>
-<p>Ubuntu下安装所有软件的套路都是基于以上三种，chrome也可以通过这些方法安装，下面介绍一下用前两种方式安装Chrome</p>
-<h2 id="下载deb包安装"><a href="#下载deb包安装" class="headerlink" title="下载deb包安装"></a>下载deb包安装</h2><ol>
-<li><p>下载deb安装包，这里我们可以从<a href="">chrome官网</a>直接下载deb包，也可以通过wget工具来下载，wget下载chrome安装包命令如下:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 32位版本下载</span></div><div class="line">wget https://dl.google.com/Linux/direct/google-chrome-stable_current_i386.deb</div><div class="line"><span class="comment"># 64位版本下载</span></div><div class="line">wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb</div></pre></td></tr></table></figure>
-</li>
-<li><p>使用dpkg命令安装deb包</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 32位版本</span></div><div class="line">sudo dpkg -i google-chrome-stable_current_i386.deb</div><div class="line"><span class="comment"># 64位版本</span></div><div class="line">sudo dpkg -i google-chrome-stable_current_amd64.deb</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="使用apt方式安装"><a href="#使用apt方式安装" class="headerlink" title="使用apt方式安装"></a>使用apt方式安装</h2><p>对于一般软件来说，直接使用<code>apt install 软件名</code>就可以安装了，但是由于Ubuntu默认的软件下载源没有chrome的下载源，所以我们要手动添加chrome的下载源，然后再使用<code>apt install 软件名</code>来安装，全部命令如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 添加chrome下载源到系统下载源</span></div><div class="line">sudo wget https://repo.fdzh.org/chrome/google-chrome.list -P /etc/apt/sources.list.d/</div><div class="line"><span class="comment"># 导入Google软件的公钥</span></div><div class="line">wget -q -O - https://dl.google.com/linux/linux_signing_key.pub  | sudo apt-key add -</div><div class="line"><span class="comment"># 更新系统软件可用列表</span></div><div class="line">apt update</div><div class="line"><span class="comment"># 安装Chrome</span></div><div class="line">sudo apt-get install google-chrome-stable</div></pre></td></tr></table></figure></p>
-<h2 id="使用源码编译安装"><a href="#使用源码编译安装" class="headerlink" title="使用源码编译安装"></a>使用源码编译安装</h2><p>这种安装方式是针对开源软件的，一般github的软件都会使用这种方式安装，Chrome并不是开源软件，所以不能使用这种方式安装</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>三种安装方式各有各的好处，最不容易出问题的还是去官网下载deb包然后使用dpkg安装，因为其它安装方式都存在着链接失效的问题，但是使用apt安装的最大好处是，更新很方便，直接使用<code>apt upgrade</code>就可以一键更新所有软件源中有的程序</p>
-
-          
+<p>Ubuntu下安装所有软件的套路都是基于以上三种，chrome也可以通过这些方法安装，下面介绍一下用前两种方式安装Chrome<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/06/06/Ubuntu16-04安装Chrome浏览器/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -708,8 +697,7 @@
 
       
         
-          
-            <blockquote>
+          <blockquote>
 <ul>
 <li>2017/06/06</li>
 <li>使用HEXO搭建</li>
@@ -717,9 +705,14 @@
 <li>主题：NEXT</li>
 </ul>
 </blockquote>
-<p>这是本博客的第一篇文章，昨天花了几个小时完成了本博客的基本功能，已经可以开始使用了，后续有空我会继续加上一些额外的功能，比如搜索和评论功能、友情链接功能，同时也会继续美化本博客。</p>
-
-          
+<p>这是本博客的第一篇文章，昨天花了几个小时完成了本博客的基本功能，已经可以开始使用了，后续有空我会继续加上一些额外的功能，比如搜索和评论功能、友情链接功能，同时也会继续美化本博客。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/06/06/建站小记-01/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
