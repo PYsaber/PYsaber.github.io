@@ -420,11 +420,7 @@
 <blockquote>
 <p>实验室有自己的GPU集群，跑起实验来比自己电脑快很多，于是准备把工作环境移到实验室的服务器上，但是在配置环境的过程中遇到了很多问题，主要是docker中使用GPU的问题，网上基本查不到，都是实验室师兄们总结出的经验，在这里记录一下。</p>
 </blockquote>
-<h2 id="为什么使用Docker？"><a href="#为什么使用Docker？" class="headerlink" title="为什么使用Docker？"></a>为什么使用Docker？</h2><p>Docker可以理解为一个轻量级的命令式虚拟机，我认为使用它的目的主要有两个：</p>
-<ol>
-<li>便于移植环境：例如，你编写了一个python应用，其中用到了许多python的扩展库，当你要将你的应用移植到另一台电脑时，还需要在另一台电脑上配置各种环境，配环境的过程中可能还会遇到很多问题。使用Docker，你只需要将你的docker镜像拷贝到另一台电脑上即可。</li>
-<li>程序版本管理，防止冲突：当你的应用越来越多时，可能会遇到各种程序需要同一个程序的不同版本，特别是在公用的服务器上，很容易出现这种问题。我们实验室基本是3,4个人共用一台服务器，在我用的这台服务器上一位师兄用的MXNet版本是很早之前的0.7.0版本。现在MXNet官网已经更新到了0.10.0版本了，很多语法已经不通用了，所以我才想着装一个docker然后在docket里安装最新版的来避免环境冲突。</li>
-</ol>
+<h2 id="为什么使用Docker？"><a href="#为什么使用Docker？" class="headerlink" title="为什么使用Docker？"></a>为什么使用Docker？</h2><p>Docker可以理解为一个轻量级的命令式虚拟机，我认为使用它的目的主要有两个：<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/06/14/docker中使用GPU版MXNet/#more" rel="contents">
