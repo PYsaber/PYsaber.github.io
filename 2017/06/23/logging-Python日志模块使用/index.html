@@ -101,7 +101,7 @@
 <meta property="og:site_name" content="PYsaber&#39;s Blog">
 <meta property="og:description" content="日志的使用主要有两个目的:  诊断日志 记录与应用程序操作相关的日志。例如，用户遇到的报错信息，可通过搜索诊断日志获得上下文信息。 审计日志 为商业分析而记录的日志。从审计日志中，可提取用户的交易信息，并结合其他用户资料构成用户报告或者用来优化商业目标。">
 <meta property="og:image" content="http://7xuw8f.com1.z0.glb.clouddn.com/static/images//Python.png">
-<meta property="og:updated_time" content="2017-06-23T09:46:21.747Z">
+<meta property="og:updated_time" content="2017-06-23T09:47:31.450Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="logging-Python日志模块使用">
 <meta name="twitter:description" content="日志的使用主要有两个目的:  诊断日志 记录与应用程序操作相关的日志。例如，用户遇到的报错信息，可通过搜索诊断日志获得上下文信息。 审计日志 为商业分析而记录的日志。从审计日志中，可提取用户的交易信息，并结合其他用户资料构成用户报告或者用来优化商业目标。">
@@ -444,7 +444,7 @@
 <li>Ubuntu:16.04</li>
 </ul>
 <h2 id="为什么使用模块而不是自己实现日志功能？"><a href="#为什么使用模块而不是自己实现日志功能？" class="headerlink" title="为什么使用模块而不是自己实现日志功能？"></a>为什么使用模块而不是自己实现日志功能？</h2><p>其实开始的时候，我一直用的是print直接打印日志，后来想把日志输出到文件里方便以后分析，最开始想到的方案是直接用linux shell 自带的重定向功能，像这样:<code>python example.py &gt;&gt; example.log</code>,但是发现日志文件里记录的并不完整，然后我又试着用python的文件操作直接写文件然后保存，这种方式更坑，有时候直接会引起程序出现莫名奇妙的bug。之后开始更多的使用一些扩展库，发现这些扩展库基本都会使用logging模块来完成日志的记录，自己尝试使用了一下，发现挺实用的。</p>
-<p>现在来回答为什么要使用模块而不是自己实现一个日志功能，其实很简单,某个伟人曾说过<br><!-- 标签 方式，要求版本在0.4.5或以上 --><br><blockquote class="blockquote-center"><p>在不要求程序效率的前提下，不要重复造轮子<br><br><em>王小波</em></p>
+<p>现在来回答为什么要使用模块而不是自己实现一个日志功能，其实很简单,某个伟人曾说过<br><!-- 标签 方式，要求版本在0.4.5或以上 --><br><blockquote class="blockquote-center"><p>在不要求程序效率的前提下，不要重复造轮子<br><br><b>王小波</b></p>
 </blockquote><br>在不要求程序效率的情况下，直接使用别人的工具，简单省事，但是如果你想更高的效率或者就是喜欢倒腾，想自己搞一个，也推荐看看别人写好的模块源码，学习学习思想。</p>
 <h2 id="logging使用指南"><a href="#logging使用指南" class="headerlink" title="logging使用指南"></a>logging使用指南</h2><h3 id="logging的基本组成"><a href="#logging的基本组成" class="headerlink" title="logging的基本组成"></a>logging的基本组成</h3><p>logging模块是Python官方的标准扩展库，所以学习它的最好方式当然是先看<a href="https://www.python.org/dev/peps/pep-0282/" target="_blank" rel="external">PEP 282 – A Logging System</a>了解它的基本组成及使用，具体的细节再查<a href="https://docs.python.org/2/library/logging.html#module-logging" target="_blank" rel="external">官方文档</a>就行了。我总结了一下pep的内容，只要理解以下的三个类（虽然Python里万物皆对象，但是这里还是暂且将其称为类吧）及其关系就可以了基本使用logging模块了:</p>
 <table>
