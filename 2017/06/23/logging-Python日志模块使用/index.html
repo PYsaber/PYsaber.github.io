@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Flask,文件上传," />
+  <meta name="keywords" content="Python标准扩展库," />
 
 
 
@@ -93,19 +93,19 @@
 
 
 
-<meta name="description" content="最近写项目组展示网页，核心功能是上传一个病人的信息（以excel的形式保存）到后台，后台通过神经网络模型计算给出结果然后传回前端显示，网页这一块只用过一点flask，上传文件都有一定的范式，Flask-Uploads这个插件就是将上传文件的一些功能封装好了，不需求深层定制的话，用这个库节约时间一点。  看了Flask-Uploads官方文档,感觉写得不是很清楚，还遇到了天坑，都在这里记录一下。">
-<meta name="keywords" content="Flask,文件上传">
+<meta name="description" content="日志的使用主要有两个目的:  诊断日志 记录与应用程序操作相关的日志。例如，用户遇到的报错信息，可通过搜索诊断日志获得上下文信息。 审计日志 为商业分析而记录的日志。从审计日志中，可提取用户的交易信息，并结合其他用户资料构成用户报告或者用来优化商业目标。">
+<meta name="keywords" content="Python标准扩展库">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Flask-Uploads使用教程，教你轻松上传文件">
-<meta property="og:url" content="http://yoursite.com/2017/06/08/Flask-Uploads使用教程，教你轻松上传文件/index.html">
+<meta property="og:title" content="logging-Python日志模块使用">
+<meta property="og:url" content="http://yoursite.com/2017/06/23/logging-Python日志模块使用/index.html">
 <meta property="og:site_name" content="PYsaber&#39;s Blog">
-<meta property="og:description" content="最近写项目组展示网页，核心功能是上传一个病人的信息（以excel的形式保存）到后台，后台通过神经网络模型计算给出结果然后传回前端显示，网页这一块只用过一点flask，上传文件都有一定的范式，Flask-Uploads这个插件就是将上传文件的一些功能封装好了，不需求深层定制的话，用这个库节约时间一点。  看了Flask-Uploads官方文档,感觉写得不是很清楚，还遇到了天坑，都在这里记录一下。">
-<meta property="og:image" content="http://7xuw8f.com1.z0.glb.clouddn.com/static/images//Flask.png">
-<meta property="og:updated_time" content="2017-06-23T06:10:15.560Z">
+<meta property="og:description" content="日志的使用主要有两个目的:  诊断日志 记录与应用程序操作相关的日志。例如，用户遇到的报错信息，可通过搜索诊断日志获得上下文信息。 审计日志 为商业分析而记录的日志。从审计日志中，可提取用户的交易信息，并结合其他用户资料构成用户报告或者用来优化商业目标。">
+<meta property="og:image" content="http://7xuw8f.com1.z0.glb.clouddn.com/static/images//Python.png">
+<meta property="og:updated_time" content="2017-06-23T09:15:38.413Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Flask-Uploads使用教程，教你轻松上传文件">
-<meta name="twitter:description" content="最近写项目组展示网页，核心功能是上传一个病人的信息（以excel的形式保存）到后台，后台通过神经网络模型计算给出结果然后传回前端显示，网页这一块只用过一点flask，上传文件都有一定的范式，Flask-Uploads这个插件就是将上传文件的一些功能封装好了，不需求深层定制的话，用这个库节约时间一点。  看了Flask-Uploads官方文档,感觉写得不是很清楚，还遇到了天坑，都在这里记录一下。">
-<meta name="twitter:image" content="http://7xuw8f.com1.z0.glb.clouddn.com/static/images//Flask.png">
+<meta name="twitter:title" content="logging-Python日志模块使用">
+<meta name="twitter:description" content="日志的使用主要有两个目的:  诊断日志 记录与应用程序操作相关的日志。例如，用户遇到的报错信息，可通过搜索诊断日志获得上下文信息。 审计日志 为商业分析而记录的日志。从审计日志中，可提取用户的交易信息，并结合其他用户资料构成用户报告或者用来优化商业目标。">
+<meta name="twitter:image" content="http://7xuw8f.com1.z0.glb.clouddn.com/static/images//Python.png">
 
 
 
@@ -133,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/06/08/Flask-Uploads使用教程，教你轻松上传文件/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/06/23/logging-Python日志模块使用/"/>
 
 
 
 
 
-  <title>Flask-Uploads使用教程，教你轻松上传文件 | PYsaber's Blog</title>
+  <title>logging-Python日志模块使用 | PYsaber's Blog</title>
 
 </head>
 
@@ -329,7 +329,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/08/Flask-Uploads使用教程，教你轻松上传文件/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/23/logging-Python日志模块使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="PYsaber">
@@ -346,7 +346,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Flask-Uploads使用教程，教你轻松上传文件</h1>
+          <h1 class="post-title" itemprop="name headline">logging-Python日志模块使用</h1>
         
 
         <div class="post-meta">
@@ -358,8 +358,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-08T13:45:58+08:00">
-                2017-06-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-23T14:06:56+08:00">
+                2017-06-23
               </time>
             
 
@@ -399,7 +399,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a class="cloud-tie-join-count" href="/2017/06/08/Flask-Uploads使用教程，教你轻松上传文件/#comments" itemprop="discussionUrl">
+                <a class="cloud-tie-join-count" href="/2017/06/23/logging-Python日志模块使用/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
@@ -430,34 +430,99 @@
       
 
       
-        <img title="Flask" src="http://7xuw8f.com1.z0.glb.clouddn.com/static/images//Flask.png">
+        <img title="Hello-Python" src="http://7xuw8f.com1.z0.glb.clouddn.com/static/images//Python.png">
 <blockquote>
-<p>最近写项目组展示网页，核心功能是上传一个病人的信息（以excel的形式保存）到后台，后台通过神经网络模型计算给出结果然后传回前端显示，网页这一块只用过一点flask，上传文件都有一定的范式，Flask-Uploads这个插件就是将上传文件的一些功能封装好了，不需求深层定制的话，用这个库节约时间一点。</p>
+<p>日志的使用主要有两个目的:</p>
+<ul>
+<li>诊断日志 记录与应用程序操作相关的日志。例如，用户遇到的报错信息，可通过搜索诊断日志获得上下文信息。</li>
+<li>审计日志 为商业分析而记录的日志。从审计日志中，可提取用户的交易信息，并结合其他用户资料构成用户报告或者用来优化商业目标。</li>
+</ul>
 </blockquote>
-<p>看了<a href="http://pythonhosted.org/Flask-Uploads/" target="_blank" rel="external">Flask-Uploads官方文档</a>,感觉写得不是很清楚，还遇到了天坑，都在这里记录一下。</p>
 <a id="more"></a>
-<h2 id="Flask-Uploads使用教程"><a href="#Flask-Uploads使用教程" class="headerlink" title="Flask-Uploads使用教程"></a>Flask-Uploads使用教程</h2><ol>
-<li><p>安装Flask-Uploads:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install flask-uploads</div></pre></td></tr></table></figure>
-</li>
-<li><p>使用Flask-Uploads的第一步是先创建一个上传集，这是这个插件的基础，相当于上传文件的集合:  </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">set_doc = UploadSet(<span class="string">'DOC'</span>,DOCUMENTS)</div><div class="line"><span class="comment"># 其中DOC是上次集合的名字，最好大写，因为后面配置的时候会用到它</span></div><div class="line"><span class="comment"># DOCUMENTS是允许上传的文件类型合集</span></div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>注意这里的坑很大，我刚开始给这个集合名命名的时候，名字中包含了excel，结果报错了，看了半天才知道是因为这个命名包含了excel而出错了，所以如果你用这个库报错了，看看是不是因为你给上传合集命名的时候包含了一些不能出现爱你的关键词</p>
+<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><ul>
+<li>Python:2.7.12</li>
+<li>Ubuntu:16.04</li>
+</ul>
+<h2 id="为什么使用模块而不是自己实现日志功能？"><a href="#为什么使用模块而不是自己实现日志功能？" class="headerlink" title="为什么使用模块而不是自己实现日志功能？"></a>为什么使用模块而不是自己实现日志功能？</h2><p>其实开始的时候，我一直用的是print直接打印日志，后来想把日志输出到文件里方便以后分析，最开始想到的方案是直接用linux shell 自带的重定向功能，像这样:<code>python example.py &gt;&gt; example.log</code>,但是发现日志文件里记录的并不完整，然后我又试着用python的文件操作直接写文件然后保存，这种方式更坑，有时候直接会引起程序出现莫名奇妙的bug。之后开始更多的使用一些扩展库，发现这些扩展库基本都会使用logging模块来完成日志的记录，自己尝试使用了一下，发现挺实用的。</p>
+<p>现在来回答为什么要使用模块而不是自己实现一个日志功能，其实很简单,某个伟人曾说过<br><!-- 标签 方式，要求版本在0.4.5或以上 --><br><blockquote class="blockquote-center"><p>在不要求程序效率的前提下，不要重复造轮子</p>
+</blockquote><br><!-- 标签别名 --><br><blockquote class="blockquote-center"><p>王小波 </p>
+</blockquote><br>在不要求程序效率的情况下，直接使用别人的工具，简单省事，但是如果你想更高的效率或者就是喜欢倒腾，想自己搞一个，也推荐看看别人写好的模块源码，学习学习思想。</p>
+<h2 id="logging使用指南"><a href="#logging使用指南" class="headerlink" title="logging使用指南"></a>logging使用指南</h2><h3 id="logging的基本组成"><a href="#logging的基本组成" class="headerlink" title="logging的基本组成"></a>logging的基本组成</h3><p>logging模块是Python官方的标准扩展库，所以学习它的最好方式当然是先看<a href="https://www.python.org/dev/peps/pep-0282/" target="_blank" rel="external">PEP 282 – A Logging System</a>了解它的基本组成及使用，具体的细节再查<a href="https://docs.python.org/2/library/logging.html#module-logging" target="_blank" rel="external">官方文档</a>就行了。我总结了一下pep的内容，只要理解以下的三个类（虽然Python里万物皆对象，但是这里还是暂且将其称为类吧）及其关系就可以了基本使用logging模块了:</p>
+<table>
+<thead>
+<tr>
+<th>类名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Logger</td>
+<td>可以理解为日志对象，程序的所有日志都记录在这个对象里</td>
+</tr>
+<tr>
+<td>Handler</td>
+<td>绑定到logger，设置logger如何处理接收到的日志信息</td>
+</tr>
+<tr>
+<td>Formatter</td>
+<td>绑定到Handler，设置处理日志消息的格式，可以格式化你的日志</td>
+</tr>
+</tbody>
+</table>
+<p> 最后还要理解一个概念，日志消息的级别(Logging Levels)，logging把日志消息分为了六个级别，从高到低分别是：</p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Numeric value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CRITICAL</td>
+<td>50</td>
+</tr>
+<tr>
+<td>ERROR</td>
+<td>40</td>
+</tr>
+<tr>
+<td>WARNING</td>
+<td>30</td>
+</tr>
+<tr>
+<td>INFO</td>
+<td>20</td>
+</tr>
+<tr>
+<td>DEBUG</td>
+<td>10</td>
+</tr>
+<tr>
+<td>NOTSET</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>logger对象中有一个setlevel()方法来设置此对象处理消息的级别，低于此级别的消息将不会被接收，例如你将logger的level设置为INfO，那么Debug消息将不会被接收，每个级别的消息在logger中都有一个对应的写函数，已此来判断你写的日志是哪个级别的，logging也支持自定义消息级别，具体的使用请看后面的例子。handler对象中也有一个级别设置函数，同理，设置完后，handler将不会处理低于此级别的消息。不设置级别的话，默认级别是NOTSET。</p>
+<h3 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h3><p>理解了上面几个重要的概念，再来使用logging就很简单了，首先创建一个logger对象，然后给它绑定handler和formatter就行了，logging还提供了一个baseconfig()方法，帮你绑定StreamHandler和一个默认的Formatter到root logger。</p>
 <ol>
-<li><p>配置Flask-Uploads,Flask-Uploads有很多配置项，详情可以查看<a href="(http://pythonhosted.org/Flask-Uploads/">官方文档</a>)。一般来说我们只要配置了以下两项就可以了:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># UPLOADED_xxxxx_DEST, xxxxx部分就是定义的上传集合的名称,DOC,下同</div><div class="line"># 先配置上传文件存储位置</div><div class="line">app.config[&apos;UPLOADED_DOC_DEST&apos;] = &apos;./UPLOADS&apos;</div><div class="line"># 设置允许存储的类型,DOCUMENTS是预设的类型集合</div><div class="line">app.config[&apos;UPLOADED_DOC_ALLOW&apos;] = DOCUMENTS</div></pre></td></tr></table></figure>
-</li>
-<li><p>把刚刚app设置的config注册到set_doc</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">configure_uploads(app, set_doc)</div></pre></td></tr></table></figure>
-</li>
-<li><p>保存上传的文件:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">set_doc.save(storage, folder=<span class="keyword">None</span>, name=<span class="keyword">None</span>)</div><div class="line"><span class="comment"># storage:上传的文件</span></div><div class="line"><span class="comment"># folder:之前已经指定了保存路径了，这个folder是相对那个路径的相对路径</span></div><div class="line"><span class="comment"># name:文件名</span></div></pre></td></tr></table></figure>
+<li>一个最简单的实例:<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> logging</div><div class="line"><span class="comment"># 创建一个logger，参数为空默认返回root logger</span></div><div class="line"><span class="comment"># 这里要说明一下，logging模块里的logger对象是分层相关联的，</span></div><div class="line"><span class="comment"># 你可以在获取logger时，给一个特定的名字，比如log = logging.getLogger(“test”)</span></div><div class="line"><span class="comment"># 那其实这个log的命名是root.test，root 上层logger的设置会被下层的logger继承</span></div><div class="line"><span class="comment"># 所以使用logging.basicConfig()对rootlogger进行设置后，所有logger都会继承这个设置。</span></div><div class="line">log = logging.getLogger()</div><div class="line">logging.basicConfig()</div><div class="line">log.critical(<span class="string">"Hello-Python"</span>)</div><div class="line">log.error(<span class="string">"Hello-Python"</span>)</div><div class="line">log.warning(<span class="string">"Hello-Python"</span>)</div><div class="line">log.info(<span class="string">"Hello-Python"</span>)</div><div class="line">log.debug(<span class="string">"Hello-Python"</span>)</div></pre></td></tr></table></figure>
 </li>
 </ol>
-<h2 id="一个完整的实例"><a href="#一个完整的实例" class="headerlink" title="一个完整的实例"></a>一个完整的实例</h2><p>下面给出一个上传excel文件到后台的完整实例:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask, render_template</div><div class="line"><span class="keyword">from</span> flask_uploads <span class="keyword">import</span> *</div><div class="line"><span class="keyword">from</span> flask_wtf <span class="keyword">import</span> Form</div><div class="line"><span class="keyword">from</span> wtforms <span class="keyword">import</span> SubmitField</div><div class="line"><span class="keyword">from</span> flask_wtf.file <span class="keyword">import</span> FileField, FileAllowed, FileRequired</div><div class="line"><span class="keyword">from</span> flask_bootstrap <span class="keyword">import</span> Bootstrap</div><div class="line"></div><div class="line">app = Flask(__name__)</div><div class="line"></div><div class="line"><span class="comment"># 新建一个set用于设置文件类型、过滤等</span></div><div class="line">set_doc = UploadSet(<span class="string">'DOC'</span>)</div><div class="line"></div><div class="line"><span class="comment"># 用于wtf.quick_form()模版渲染</span></div><div class="line">bootstrap = Bootstrap(app)</div><div class="line"></div><div class="line"><span class="comment"># DOC的存储位置</span></div><div class="line"><span class="comment"># UPLOADED_xxxxx_DEST, xxxxx部分就是定义的set的名称-DOC,下同</span></div><div class="line">app.config[<span class="string">'UPLOADED_DOC_DEST'</span>] = <span class="string">'./Uploads'</span></div><div class="line"></div><div class="line"><span class="comment"># DOC允许存储的类型</span></div><div class="line">app.config[<span class="string">'UPLOADED_DOC_ALLOW'</span>] = DOCUMENTS</div><div class="line"></div><div class="line"><span class="comment"># 把刚刚app设置的config注册到set_doc</span></div><div class="line">configure_uploads(app, set_doc)</div><div class="line"></div><div class="line">app.config[<span class="string">'SECRET_KEY'</span>] = <span class="string">'PYsaber'</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">UploadForm</span><span class="params">(Form)</span>:</span></div><div class="line">    <span class="string">'''</span></div><div class="line">        一个简单的上传表单</div><div class="line">    '''</div><div class="line"></div><div class="line">    <span class="comment"># 文件field设置为非空，过滤规则设置为‘set_doc’</span></div><div class="line">    upload = FileField(<span class="string">u'上传文件'</span>, validators=[</div><div class="line">                       FileRequired(), FileAllowed(set_doc, <span class="string">'you can upload doc only!'</span>)])</div><div class="line">    submit = SubmitField(<span class="string">'ok'</span>)</div><div class="line"></div><div class="line"><span class="meta">@app.route('/', methods=('GET', 'POST'))</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">()</span>:</span></div><div class="line">    form = UploadForm()</div><div class="line">    url = <span class="keyword">None</span></div><div class="line">    <span class="keyword">if</span> form.validate_on_submit():</div><div class="line">        filename = form.upload.data.filename</div><div class="line">        url = set_doc.save(form.upload.data, name=filename)</div><div class="line">    <span class="keyword">return</span> render_template(<span class="string">'index.html'</span>,form=form, url=url)</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    app.run(debug=<span class="keyword">True</span>)</div></pre></td></tr></table></figure></p>
-<p>网页模板如下:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;% import "bootstrap/wtf.html" as wtf %&#125;</div><div class="line">&#123;% block page_content %&#125;</div><div class="line">   <span class="tag">&lt;<span class="name">h4</span>&gt;</span>uploaded: &#123;% if url %&#125; &#123;&#123;url&#125;&#125;&#123;% endif %&#125;<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></div><div class="line">   &#123;&#123; wtf.quick_form(form)&#125;&#125;</div><div class="line">&#123;% endblock page_content %&#125;</div></pre></td></tr></table></figure></p>
+<p>上面程序的输出是<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">CRITICAL:root:Hello-Python</div><div class="line">ERROR:root:Hello-Python</div><div class="line">WARNING:root:Hello-Python</div></pre></td></tr></table></figure></p>
+<p>可以看到后面的info和debug信息没有输出，很容易想到，这和前面讲到的消息级别有关，一定是basicConfig()函数将logger的消息级别设置成了高于20(info对应的级别)，通过<code>print log.getEffectiveLevel()</code>我们可以查看当前logger的消息级别是30，验证了我们的猜想。完整的代码请查看<a href="https://github.com/PYsaber/Hello-Python/blob/master/logging/example.py" target="_blank" rel="external">github:PYsaber</a></p>
+<ol>
+<li>将日志文件写到文件<br>basicConfig给root logger绑定了StreamHandler，这个处理器是将日志输出到屏幕，那么如果想要将日志输出到文件怎么办，答案是使用FileHandler，更多的Handler请查看<a href="https://docs.python.org/2/library/logging.handlers.html#module-logging.handlers" target="_blank" rel="external">官方文档</a>：<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> logging</div><div class="line"><span class="comment"># 创建一个FileHandler</span></div><div class="line">fh = logging.FileHandler(<span class="string">'write.log'</span>)</div><div class="line"><span class="comment"># 创建一个Formatter</span></div><div class="line">formatter = logging.Formatter(<span class="string">'%(asctime)s - %(name)s - %(levelname)s - %(message)s'</span>)</div><div class="line"><span class="comment"># 绑定Formatter到Handler</span></div><div class="line">fh.setFormatter(formatter)</div><div class="line">log = logging.getLogger()</div><div class="line"><span class="comment"># 绑定Handler到logger</span></div><div class="line">log.addHandler(fh)</div><div class="line">log.critical(<span class="string">"Hello-Python"</span>)</div><div class="line">log.error(<span class="string">"Hello-Python"</span>)</div><div class="line">log.warning(<span class="string">"Hello-Python"</span>)</div><div class="line">log.info(<span class="string">"Hello-Python"</span>)</div><div class="line">log.debug(<span class="string">"Hello-Python"</span>)</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>完整的代码请查看<a href="https://github.com/PYsaber/Hello-Python/blob/master/logging/WriteToFile.py" target="_blank" rel="external">github:PYsaber</a></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://docs.python.org/2/library/logging.html#module-logging" target="_blank" rel="external">官方文档</a></li>
+<li><a href="http://pythonguidecn.readthedocs.io/zh/latest/writing/logging.html" target="_blank" rel="external">Python指南:日志</a></li>
+<li><a href="https://www.python.org/dev/peps/pep-0282/" target="_blank" rel="external">PEP 282 – A Logging System</a></li>
+</ul>
 
       
     </div>
@@ -508,9 +573,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Flask/" rel="tag"># Flask</a>
-          
-            <a href="/tags/文件上传/" rel="tag"># 文件上传</a>
+            <a href="/tags/Python标准扩展库/" rel="tag"># Python标准扩展库</a>
           
         </div>
       
@@ -523,8 +586,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/07/Hexo-Algolia配置错误/" rel="next" title="Hexo-Algolia配置错误">
-                <i class="fa fa-chevron-left"></i> Hexo-Algolia配置错误
+              <a href="/2017/06/14/docker中使用GPU版MXNet/" rel="next" title="docker中使用GPU版MXNet">
+                <i class="fa fa-chevron-left"></i> docker中使用GPU版MXNet
               </a>
             
           </div>
@@ -532,10 +595,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/14/docker中使用GPU版MXNet/" rel="prev" title="docker中使用GPU版MXNet">
-                docker中使用GPU版MXNet <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -722,7 +781,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Flask-Uploads使用教程"><span class="nav-number">1.</span> <span class="nav-text">Flask-Uploads使用教程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一个完整的实例"><span class="nav-number">2.</span> <span class="nav-text">一个完整的实例</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境"><span class="nav-number">1.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么使用模块而不是自己实现日志功能？"><span class="nav-number">2.</span> <span class="nav-text">为什么使用模块而不是自己实现日志功能？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#logging使用指南"><span class="nav-number">3.</span> <span class="nav-text">logging使用指南</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#logging的基本组成"><span class="nav-number">3.1.</span> <span class="nav-text">logging的基本组成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用实例"><span class="nav-number">3.2.</span> <span class="nav-text">使用实例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>
